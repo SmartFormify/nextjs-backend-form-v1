@@ -1,7 +1,7 @@
 export default function RegistrationForm() {
     return (
         <main className="registration-page">
-
+            <h1>Registration Form</h1>
             <div className="registration-card">
 
                 <div className="form-header">

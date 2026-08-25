@@ -1,7 +1,7 @@
 export default function LoginForm() {
     return (
         <main className="login-page">
-
+             <h1>Login Form</h1>
             <div className="login-card">
 
                 {/* Header */}

@@ -1,11 +1,11 @@
-# Next.js Registration Form
+# Next.js Login UI Form
 
-A basic **Registration Form** built with Next.js that submits form data directly to a **SmartFormify endpoint**.
+A basic **Login UI Form** built with Next.js that submits form data directly to a **SmartFormify endpoint**.
 
 ## Folder Structure
 
 ```text
-registration-form/
+login-ui-form/
 ├── README.md
 ├── .env.example
 ├── package.json
@@ -18,14 +18,9 @@ registration-form/
 
 ## Form Fields
 
-- First Name
-- Last Name
 - Email Address
-- Phone Number
-- Account Type
 - Password
-- Confirm Password
-- Terms & Conditions
+- Remember Me
 
 ## Setup
 
@@ -64,7 +59,7 @@ http://localhost:3000
 ## How It Works
 
 ```text
-Next.js Registration Form
+Next.js Login Form
         ↓
 .env.local
         ↓
@@ -87,6 +82,8 @@ The `.env.example` file should contain only the placeholder:
 NEXT_PUBLIC_SMARTFORMIFY_ENDPOINT=https://api.smartformify.com/YOUR_FORM_ENDPOINT
 ```
 
-**Security note:** This example includes password fields for demonstration purposes. Do not use SmartFormify as a password-storage or authentication system. For a real registration system, handle passwords through a dedicated authentication backend with secure password hashing.
+The **Forgot password?** and **Create an account** links are UI placeholders and are not submitted as form fields.
+
+**Security note:** This is a UI/form-submission example. Do not use SmartFormify as an authentication or password-storage system. For a real login system, credentials should be processed by a dedicated authentication backend.
 
 Make sure the domain where the form is hosted is allowed by your SmartFormify endpoint settings if domain restrictions are enabled.

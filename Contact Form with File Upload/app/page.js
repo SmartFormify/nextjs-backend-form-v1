@@ -1,6 +1,7 @@
 export default function ContactForm() {
     return (
         <main className="page-container">
+             <h1>Contact Us</h1>
             <div className="contact-container">
 
                 {/* Contact Information */}
