@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    color: #1f2937;
+}
+
+.registration-page {
+    min-height: 100vh;
+    padding: 50px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.registration-card {
+    width: 100%;
+    max-width: 620px;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 10px;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.brand-mark {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #1f2937;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.form-header h1 {
+    margin: 0 0 8px;
+    font-size: 30px;
+}
+
+.form-header p {
+    margin: 0;
+    color: #6b7280;
+}
+
+.registration-form {
+    width: 100%;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: 600;
+}
+
+.form-group label span {
+    color: #dc2626;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+    font: inherit;
+    background: #ffffff;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #64748b;
+}
+
+.password-hint {
+    margin: -8px 0 20px;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.terms-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.terms-group input {
+    margin-top: 3px;
+}
+
+.terms-group label {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.terms-group a,
+.form-footer a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 12px 20px;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+}
+
+.form-footer {
+    margin-top: 24px;
+    text-align: center;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+@media (max-width: 600px) {
+    .registration-page {
+        padding: 20px;
+    }
+
+    .registration-card {
+        padding: 28px 22px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .form-header h1 {
+        font-size: 26px;
+    }
+}
