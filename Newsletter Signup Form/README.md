@@ -1,11 +1,11 @@
-# Next.js Login UI Form
+# Next.js Newsletter Signup Form
 
-A basic **Login UI Form** built with Next.js that submits form data directly to a **SmartFormify endpoint**.
+A basic **Newsletter Signup Form** built with Next.js that submits form data directly to a **SmartFormify endpoint**.
 
 ## Folder Structure
 
 ```text
-Login UI Form/
+Newsletter Signup/
 ├── README.md
 ├── .env.example
 ├── package.json
@@ -19,8 +19,8 @@ Login UI Form/
 ## Form Fields
 
 - Email Address
-- Password
-- Remember Me
+- Name
+- Consent
 
 ## Setup
 
@@ -59,7 +59,7 @@ http://localhost:3000
 ## How It Works
 
 ```text
-Next.js Login Form
+Next.js Newsletter Form
         ↓
 .env.local
         ↓
@@ -72,18 +72,30 @@ The form submits directly to SmartFormify using the standard HTML `POST` method.
 
 No Next.js API route, server action, or additional backend is required.
 
-## Note
+## Environment Variable
 
-Keep `.env.local` private and do not commit it to your repository.
-
-The `.env.example` file should contain only the placeholder:
+The `.env.example` file contains the endpoint placeholder:
 
 ```env
 NEXT_PUBLIC_SMARTFORMIFY_ENDPOINT=https://api.smartformify.com/YOUR_FORM_ENDPOINT
 ```
 
-The **Forgot password?** and **Create an account** links are UI placeholders and are not submitted as form fields.
+Use your actual endpoint in `.env.local`:
 
-**Security note:** This is a UI/form-submission example. Do not use SmartFormify as an authentication or password-storage system. For a real login system, credentials should be processed by a dedicated authentication backend.
+```env
+NEXT_PUBLIC_SMARTFORMIFY_ENDPOINT=https://api.smartformify.com/YOUR_ACTUAL_ENDPOINT
+```
+
+The form references the endpoint using:
+
+```jsx
+action={process.env.NEXT_PUBLIC_SMARTFORMIFY_ENDPOINT}
+```
+
+The endpoint does not need to be hard-coded in `app/page.js`.
+
+## Note
+
+Keep `.env.local` private and do not commit it to your repository.
 
 Make sure the domain where the form is hosted is allowed by your SmartFormify endpoint settings if domain restrictions are enabled.
