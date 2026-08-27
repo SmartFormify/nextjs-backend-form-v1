@@ -1,0 +1,28 @@
+{
+  "name": "nextjs-form-backend-examples",
+  "private": true,
+  "version": "2.0.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "verify:examples": "node scripts/verify-examples.mjs",
+    "check:links": "node scripts/check-links.mjs",
+    "verify": "npm run typecheck && npm run verify:examples && npm run check:links"
+  },
+  "dependencies": {
+    "next": "16.3.3",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "zod": "4.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "24.10.4",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
+    "eslint": "9.39.2",
+    "eslint-config-next": "16.3.3",
+    "typescript": "5.9.3"
+  }
+}

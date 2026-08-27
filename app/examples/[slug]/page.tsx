@@ -1,0 +1,4 @@
+import { notFound } from 'next/navigation'
+import { examples } from '@/lib/catalogue'
+export function generateStaticParams() { return examples.map(({ slug }) => ({ slug })) }
+export default async function ExamplePage({ params }: { params: Promise<{ slug: string }> }) { const { slug } = await params; const example = examples.find((item) => item.slug === slug); if (!example) notFound(); return <main><p className="eyebrow">Ready-to-use form</p><h1>{example.name}</h1><p>{example.summary}</p><form action="https://api.smartformify.com/fe/YOUR_ENDPOINT_KEY" method="POST"><p><label htmlFor="name">Name <input id="name" name="name" required /></label></p><p><label htmlFor="email">Email <input id="email" type="email" name="email" required /></label></p><p><label htmlFor="message">Details <textarea id="message" name="message" required /></label></p><button type="submit">Send request</button></form></main> }
